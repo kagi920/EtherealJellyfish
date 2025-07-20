@@ -2,14 +2,32 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSWorldSensingUsageDescription</key>
+	<string>周囲の環境を認識し、バーチャルなクラゲが壁や家具とインタラクションするために使用します</string>
+	<key>NSHandsTrackingUsageDescription</key>
+	<string>あなたの手の動きでクラゲに触れたり、操作したりするために使用します</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>周囲の音に反応してクラゲが光ったり動いたりする演出のために使用します</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
-		<key>UIApplicationPreferredDefaultSceneSessionRole</key>
-		<string>UIWindowSceneSessionRoleApplication</string>
 		<key>UIApplicationSupportsMultipleScenes</key>
-		<true/>
+		<false/>
 		<key>UISceneConfigurations</key>
-		<dict/>
+		<dict>
+			<key>UIApplication</key>
+			<array>
+				<dict>
+					<key>UISceneConfigurationName</key>
+					<string>Default Configuration</string>
+					<key>UISceneDelegateClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
+				</dict>
+			</array>
+		</dict>
+		<key>UIApplicationPreferredDefaultSceneSessionRole</key>
+		<string>ImmersiveSpaceApplicationSessionRole</string>
+		<key>UISceneInitialImmersionStyle</key>
+		<string>mixed</string>
 	</dict>
 </dict>
 </plist>
